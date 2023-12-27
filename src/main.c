@@ -39,9 +39,7 @@ int main(int argc, char* argv[]){
         delete_graph(graph);
         error_handler(INVALID_NUMBER_OF_ISLANDS, NULL);
     }
-    for (int i = 0; i < graph->countOfIslands; i++) {
-        dijkstra(graph, graph->islands[i]);
-    }
+    pathfinder(graph);
     delete_graph(graph);
     return 0;
 }
